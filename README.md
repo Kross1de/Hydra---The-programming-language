@@ -131,12 +131,31 @@ Use the . operator on instances:
 
     instance.memberName
 
-### Arrays
-Arrays are declared with square brackets:
+Array Methods
+Hydra provides two powerful built-in methods for arrays:
 
-    [element1, element2, ...]
+1. index() Method
+The [index()](cci:1://file:///c:/Users/fishk/Desktop/pythonProject1/Hydra.py:231:4-238:55) method returns the first index of a specified element in the array.
+Syntax: array.index(element, start=None, end=None)
+- `element`: The value to search for
+- `start` (optional): Starting index for the search
+- `end` (optional): Ending index for the search
 
-Use array[index] to access or assign values. If index is out of range or not an int, an error is thrown.
+If the element is not found, it throws an error.
+
+Example:
+arr = [10, 20, 30, 20, 40];
+position = arr.index(20);     // Returns 1 (first occurrence of 20)
+position = arr.index(20, 2);  // Returns 3 (first occurrence of 20 after index 2)
+
+2. count() Method
+The [count()](cci:1://file:///c:/Users/fishk/Desktop/pythonProject1/Hydra.py:240:4-241:41) method returns the number of times a specified element appears in the array.
+Syntax: array.count(element)
+Returns 0 if the element is not found.
+
+Example:
+arr = [10, 20, 30, 20, 40];
+occurrences = arr.count(20);  // Returns 2 (20 appears twice in the array)
 
 ### The Use Statement
 Hydra can import and run code from another file using the use keyword:
